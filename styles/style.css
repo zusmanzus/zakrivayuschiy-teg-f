@@ -17,4 +17,22 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--main-font);
 }
+
+@supports (font-variation-settings: normal) {
+  .page {
+      font-family: var(--main-font), sans-serif;
+  }
+}
+
+
+/* .popup {
+  block-size: 100%;
+  inline-size: 100%;
+  z-index: 1;
+}
+
+.popup::backdrop {
+  background-color: rgb(0 0 0 / 0.75);
+}  */
