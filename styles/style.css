@@ -6,7 +6,6 @@
 ✦ like-icon — для svg-иконки анимированного сердца
 ✦ card__like-button — для кнопки Like рядом с иконкой
 ✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
@@ -32,6 +31,63 @@
   }
 }
 
+.header {
+  font-family: var(--additional-font);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--themes-background);
+  border: 2px solid var(--themes-main-color);
+  margin-inline: 20vw;
+  padding-block: 15% 2%;
+  text-transform: uppercase;
+}
+
+.header-decoration {
+  font-size: 65px;
+  margin-block-end: 3vh;
+}
+
+.title {
+  font-size: 23px;
+  margin-block-end: 3vh;
+}
+
+.theme-menu__list {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1vh;
+}
+
+.theme-menu__button {
+  background-color: transparent;
+  border: none;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+  position: relative;
+  cursor: pointer;
+}
+
+.theme-menu__button:disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.theme-menu__button:disabled::before {
+  content: '▶';
+  color: var(--themes-main-color);
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.card__icon-button {
+  
+}
 
 /* .popup {
   block-size: 100%;
