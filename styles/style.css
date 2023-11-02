@@ -17,7 +17,13 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: var(--main-font);
+  font-family: var(--main-font), sans-serif;
+  font-size: var(--main-font-size);
+  font-variation-settings: 'wght' var(--themes-main-font-weight), 'wdth' 100, 'opsz' 0;
+  background-color: var(--themes-background);
+  background-image: var(--themes-background-image);
+  background-size: cover;
+  color: var(--themes-main-color);
 }
 
 @supports (font-variation-settings: normal) {
