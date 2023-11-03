@@ -4,4 +4,6 @@
     --main-font: 'Inter';
     --main-font-size: 18px;
     --additional-font: 'PressStart2P';
+    --margin-inline-container: 25.6vw;
+    --font-weight-700: 700;
   }
