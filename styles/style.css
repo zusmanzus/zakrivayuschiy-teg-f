@@ -112,6 +112,7 @@
 }
 
 .card-decoration__text {
+  z-index: 2;
   font-family: var(--additional-font);
   font-size: 14px;
   position: absolute;
@@ -140,6 +141,38 @@
 
 .card-picture {
   max-inline-size: 100%;
+}
+
+.card-picture__first {
+  filter: invert(0.1);
+}
+
+.card-picture__second {
+  filter: grayscale(1);
+}
+
+.card-picture__third {
+  filter: brightness(0.5);
+}
+
+.card-picture__fourth {
+  filter: hue-rotate(80deg);
+}
+
+.card-picture__fifth {
+  filter: contrast(2);
+}
+
+.card-picture__sixth {
+  filter: sepia(1);
+}
+
+.card-picture__seventh {
+  filter: blur(8px);
+}
+
+.card-picture__eighth {
+  filter: saturate(1.5);
 }
 
 .card-paragraph {
@@ -200,6 +233,6 @@
   background-color: rgb(0 0 0 / 0.75);
 }  */
 
-@media (width <= 375px) {
+/* @media (width <= 375px) {
 
-}
+} */
