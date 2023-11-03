@@ -100,6 +100,7 @@
   border: 2px solid var(--themes-main-color);
   margin-inline: var(--margin-inline-container);
   margin-block-end: 4.5vh;
+  position: relative;
 }
 
 .card__title {
@@ -109,6 +110,33 @@
   font-size: var(--main-font-size);
   padding-block: 0.6vh;
 }
+
+.card-decoration__text {
+  font-family: var(--additional-font);
+  font-size: 14px;
+  position: absolute;
+  right: 2vw;
+  top: 6vh;
+  color: var(--themes-main-color);
+  -webkit-text-stroke: 1px #fff;
+  mix-blend-mode: hard-light;
+}
+
+@supports((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
+  .card-decoration__text {
+      -webkit-text-stroke: 1px #fff;
+      text-stroke: 1px #fff;
+      text-shadow: none;
+  }
+} 
+
+/* .card-decoration:first-of-type::before {
+  content: '</HTML>';
+}
+
+.card-decoration:nth-of-type(2)::before {
+  content: 'fdf';
+} */
 
 .card-picture {
   max-inline-size: 100%;
@@ -155,7 +183,7 @@
   display: flex;
   align-items: center;
   margin-inline: auto;
-  margin-block: 5vh 10vh;
+  margin-block: 5vh 9.5vh;
   background-color: var(--themes-background);
   padding-inline: 1.55vw;
   padding-block: 1.5vh;
@@ -171,3 +199,7 @@
 .popup::backdrop {
   background-color: rgb(0 0 0 / 0.75);
 }  */
+
+@media (width <= 375px) {
+
+}
