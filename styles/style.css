@@ -46,12 +46,12 @@
 }
 
 .header-decoration {
-  font-size: 65px;
+  font-size: clamp(49px, 2vw, 65px);
   margin-block-end: 1.75vh;
 }
 
 .title {
-  font-size: 23px;
+  font-size: clamp(14px, 2.5vw, 23px);
   margin-block-end: 2.5vh;
 }
 
@@ -320,9 +320,9 @@
   flex-shrink: 0;
 }
 
-@media (width <= 375px) {
+@media (width <= 768px) {
   .page {
-    max-inline-size: 375px;
+    /* max-inline-size: 375px; */
     inline-size: 100%;
   }
 
