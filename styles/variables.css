@@ -6,5 +6,6 @@
     --additional-font: 'PressStart2P';
     --margin-inline-container: 25.6vw;
     --font-weight-700: 700;
-    --button-text-color: var(----themes-background);
+    --button-accent-color: #fff;
+    --heart-accent-color: #f00;
   }
