@@ -6,8 +6,8 @@
     <meta name="color-scheme" content="dark light" />
     <title>Закрывающий тег</title>
     <link rel="stylesheet" href="./fonts/fonts.css" />
-    <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/globals.css" />
+    <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/animations.css" />
     <link rel="stylesheet" href="./styles/themes.css" />
@@ -18,7 +18,7 @@
   </head>
   <body class="page">
     <header class="header">
-      <span class="header-decoration">&lt;/HTML&gt;</span>
+      <a class="header-decoration">&lt;/HTML&gt;</a>
       <h1 class="title">закрывающий тег</h1>
       <nav class="theme-menu header__theme-menu">
         <ul class="theme-menu__list">
@@ -55,7 +55,7 @@
           <img
             src="./images/car-violet.jpg"
             alt="Пиксельный фургончик в фиолетовых тонах"
-            class="card-picture card-picture__first"
+            class="card-picture card-filter__invert"
           />
         </div>
         <p class="card-paragraph">
@@ -112,7 +112,7 @@
           <img
             src="./images/car-brown.jpg"
             alt="Пиксельный фургончик в кофейно-коричневых тонах"
-            class="card-picture card-picture__second"
+            class="card-picture card-filter__grayscale"
           />
         </div>
         <p class="card-paragraph">
@@ -171,7 +171,7 @@
           <img
             src="./images/car-ultra-violet.jpg"
             alt="Пиксельный фургончик в ультрафиолетовых тонах"
-            class="card-picture card-picture__third"
+            class="card-picture card-filter__brightness"
           />
         </div>
         <p class="card-paragraph">
@@ -228,7 +228,7 @@
           <img
             src="./images/car-pink.jpg"
             alt="Пиксельный фургончик в розовых тонах"
-            class="card-picture card-picture__fourth"
+            class="card-picture card-filter__hue-rotate"
           />
         </div>
         <p class="card-paragraph">
@@ -287,7 +287,7 @@
           <img
             src="./images//car-green.jpg"
             alt="Пиксельный фургончик в зелёных тонах"
-            class="card-picture card-picture__fifth"
+            class="card-picture card-filter__contrast"
           />
         </div>
         <p class="card-paragraph">
@@ -346,7 +346,7 @@
           <img
             src="./images/car-sepia.jpg"
             alt="Пиксельный фургончик в ретро цветах, стиль сепия"
-            class="card-picture card-picture__sixth"
+            class="card-picture card-filter__sepia"
           />
         </div>
         <p class="card-paragraph">
@@ -403,7 +403,7 @@
           <img
             src="./images/car-violet.jpg"
             alt="Пиксельный фургончик в фиолетовых тонах, картинка заблюрена"
-            class="card-picture card-picture__seventh"
+            class="card-picture card-filter__multiple"
           />
         </div>
         <p class="card-paragraph">
@@ -461,7 +461,7 @@
           <img
             src="./images/car-green-sepia.jpg"
             alt="Пиксельный фургончик в зелёно-томатных"
-            class="card-picture card-picture__eighth"
+            class="card-picture card-filter__saturate"
           />
         </div>
         <p class="card-paragraph">
@@ -515,7 +515,9 @@
           </button>
         </div>
       </article>
-
+    </main>
+    
+    <footer class="footer">
       <button
         type="button"
         onclick="window.popup.showModal();"
@@ -532,7 +534,8 @@
         </svg>
         <span class="button__text"> Сохранить на память </span>
       </button>
-    </main>
+    </footer>
+
     <dialog class="popup" id="popup">
       <div class="popup__container">
         <svg class="popup__icon" viewBox="0 0 21 21">

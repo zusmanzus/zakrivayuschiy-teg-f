@@ -152,14 +152,15 @@
   right: 2vw;
   top: 6vh;
   color: var(--themes-main-color);
-  -webkit-text-stroke: 1px #fff;
+  opacity: 0.5;
   mix-blend-mode: hard-light;
+  -webkit-text-stroke: 1px var(--themes-background);
 }
 
-@supports ((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
+@supports ((text-stroke: 1px var(--themes-background)) or (-webkit-text-stroke: 1px var(--themes-background))) {
   .card-decoration__text {
-    -webkit-text-stroke: 1px #fff;
-    text-stroke: 1px #fff;
+    -webkit-text-stroke: 1px var(--themes-background);
+    text-stroke: 1px var(--themes-background);
     text-shadow: none;
   }
 }
@@ -168,35 +169,35 @@
   inline-size: 100%;
 }
 
-.card-picture__first {
+.card-filter__invert {
   filter: invert(0.1);
 }
 
-.card-picture__second {
+.card-filter__grayscale {
   filter: grayscale(1);
 }
 
-.card-picture__third {
+.card-filter__brightness {
   filter: brightness(0.5);
 }
 
-.card-picture__fourth {
+.card-filter__hue-rotate {
   filter: hue-rotate(80deg);
 }
 
-.card-picture__fifth {
+.card-filter__contrast {
   filter: contrast(2);
 }
 
-.card-picture__sixth {
+.card-filter__sepia {
   filter: sepia(1);
 }
 
-.card-picture__seventh {
+.card-filter__multiple {
   filter: blur(4px) contrast(1.5);
 }
 
-.card-picture__eighth {
+.card-filter__saturate {
   filter: saturate(1.5);
 }
 
@@ -235,8 +236,8 @@
 }
 
 .card__like-button {
-  padding-inline: 2.25vw;
-  padding-block: 1vh;
+  padding-inline: 17px;
+  padding-block: 9px;
 }
 
 .button:focus {
@@ -289,6 +290,7 @@
   max-inline-size: 355px;
   background-color: var(--themes-background);
   font-family: var(--additional-font);
+  font-size: 14px;
   line-height: 1.5;
   text-transform: uppercase;
   color: var(--themes-main-color);
