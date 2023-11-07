@@ -33,34 +33,37 @@
 }
 
 .header {
-  font-family: var(--additional-font);
+  font-family: var(--additional-font, fantasy);
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: var(--themes-background);
   border: 2px solid var(--themes-main-color);
   margin-inline: var(--margin-inline-container);
-  margin-block-start: 7%;
-  padding-block: 9.5% 2%;
+  margin-block-start: 102px;
+  padding-inline: clamp(0.875rem, -1.4687rem + 9.9996vw, 7.531rem);
   text-transform: uppercase;
 }
 
 .header-decoration {
-  font-size: clamp(49px, 2vw, 65px);
-  margin-block-end: 1.75vh;
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  margin-block-start: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem);
+  margin-block-end: 20px;
 }
 
 .title {
-  font-size: clamp(14px, 2.5vw, 23px);
-  margin-block-end: 2.5vh;
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  margin-block-end: 25px;
 }
 
 .theme-menu__list {
   font-size: 14px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 1vh;
+  align-items: flex-start;
+  gap: 14px;
+  padding-inline-start: 20px;
+  margin-block-end: 25px;
 }
 
 .theme-menu__button {
@@ -68,11 +71,10 @@
   border: none;
   text-transform: uppercase;
   display: flex;
-  flex-direction: row;
-  gap: 5%;
   position: relative;
   cursor: pointer;
   transition: transform 0.3s ease;
+  padding: 0;
 }
 
 .theme-menu__button:focus {
@@ -92,7 +94,7 @@
   content: "";
   position: absolute;
   display: block;
-  inline-size: 85%;
+  inline-size: 100%;
   block-size: 2px;
   margin-block-start: 15px;
   background-color: currentColor;
@@ -108,17 +110,17 @@
 .theme-menu__button:disabled::before {
   content: "▶";
   color: var(--themes-main-color);
-  width: 100%;
-  height: 100%;
+  position: absolute;
   animation-name: arrow;
   animation-duration: 1.5s;
   animation-iteration-count: infinite;
   transition: 0.3s;
   transition-timing-function: ease-in-out;
+  inset-inline-start: -20px;
 }
 
-.card:first-of-type {
-  margin-block-start: 9vh;
+.container {
+  padding-block-start: 100px;
 }
 
 .card:last-of-type {
@@ -134,10 +136,9 @@
 }
 
 .card__title {
-  padding-inline-start: 0.9vw;
+  padding: 4px 10px;
   font-variation-settings: "wght" var(--font-weight-700);
   font-size: var(--main-font-size);
-  padding-block: 0.6vh;
 }
 
 .card-decoration {
@@ -146,7 +147,7 @@
 
 .card-decoration__text {
   z-index: 2;
-  font-family: var(--additional-font);
+  font-family: var(--additional-font, fantasy);
   font-size: 14px;
   position: absolute;
   right: 2vw;
@@ -225,8 +226,13 @@
   border: none;
 }
 
+.card__icon-button:focus-visible,
+.card__icon-button:focus {
+  outline: none;
+}
+
 .button {
-  font-family: var(--additional-font);
+  font-family: var(--additional-font, fantasy);
   font-size: 14px;
   line-height: 0.9;
   background-color: var(--themes-background);
@@ -289,7 +295,7 @@
   inline-size: 100%;
   max-inline-size: 355px;
   background-color: var(--themes-background);
-  font-family: var(--additional-font);
+  font-family: var(--additional-font, fantasy);
   font-size: 14px;
   line-height: 1.5;
   text-transform: uppercase;
@@ -331,17 +337,6 @@
   .header {
     width: 100%;
     margin-inline: 0;
-    margin-block-start: 10vh;
-    padding-block: 12vh 3vh;
-  }
-
-  .header-decoration {
-    font-size: 49px;
-  }
-
-  .title {
-    font-size: 14px;
-    margin-block-end: 3vh;
   }
 
   .card {
