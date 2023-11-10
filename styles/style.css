@@ -79,6 +79,7 @@
 
 .theme-menu__button:focus {
   outline: none;
+  opacity: 0.6;
 }
 
 .theme-menu__button:disabled {
@@ -294,7 +295,7 @@
   display: flex;
   align-items: center;
   margin-inline: auto;
-  margin-block: 50px auto;
+  margin-block: 50px 102px;
   background-color: var(--themes-background);
   padding-inline: 20px;
   padding-block: 15px;
@@ -326,10 +327,13 @@
   display: flex;
   align-items: center;
   gap: 15px;
+  padding-inline: 32px;
+  padding-block: 20px;
 }
 
 .popup__button {
   inline-size: 100%;
+  block-size: 38px;
 }
 
 .popup__icon {
@@ -388,7 +392,11 @@
     height: 28px;
   }
 
-  .popup {
-    padding: 5% 6%;
+  .popup  {
+    padding-inline: 50px;
   }
-}
+
+  .popup__container  {
+    padding-inline: 0;
+  }
+} 
