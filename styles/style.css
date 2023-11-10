@@ -160,7 +160,10 @@
   -webkit-text-stroke: 1px var(--themes-background);
 }
 
-@supports ((text-stroke: 1px var(--themes-background)) or (-webkit-text-stroke: 1px var(--themes-background))) {
+@supports (
+  (text-stroke: 1px var(--themes-background)) or
+    (-webkit-text-stroke: 1px var(--themes-background))
+) {
   .card-decoration__text {
     -webkit-text-stroke: 1px var(--themes-background);
     text-stroke: 1px var(--themes-background);
@@ -315,7 +318,7 @@
 
 .popup::backdrop {
   background-color: rgb(0 0 0 / 0.75);
-} 
+}
 
 .popup[open] {
   display: grid;
@@ -378,7 +381,7 @@
     margin-block: 0 26px;
     margin-inline: 25px 29px;
   }
-  
+
   .card-like__block {
     margin-block-end: 21px;
   }
@@ -392,11 +395,11 @@
     height: 28px;
   }
 
-  .popup  {
+  .popup {
     padding-inline: 50px;
   }
 
-  .popup__container  {
+  .popup__container {
     padding-inline: 0;
   }
-} 
+}
